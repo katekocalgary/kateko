@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %> </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="keywords" content=<%= title %>>
+    <meta name="description" content=<%= title %>>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-ND82LB6');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body class="is-preload">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND82LB6"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+        
+        <!-- Header -->
+            <div id="header">
+
+                <div class="top">
+
+                    <!-- Logo -->
+                        <div id="logo" >
+                            <span class="image avatar48"><img id="katethumb" src="/img/kate.jpg" alt="kate profile image" /></span>
+                            <h1 id="title">Kate Ko</h1>
+                            <p>UI/UX Designer </p>
+                            <p>/ Web Developer</p>
+                        </div>
+
+                    <!-- Nav -->
+                        <nav id="nav">
+                            <ul>
+                                <li><a href="/" id="index" <% if (page === 'index') { %> class="active" <% } %> > <span class="icon solid fa-home">Intro</span></a></li>
+                                <li><a href="/project" id="project" <% if (page === 'project') { %> class="active" <% } %> ><span class="icon solid fa-th">Project</span></a></li>
+                                <li><a href="/about" id="about" <% if (page === 'about') { %> class="active" <% } %> ><span class="icon solid fa-user">About Kate</span></a></li>
+                                <li><a href="/posts" id="testimonial-link" <% if (page === 'posts') { %> class="active" <% } %> ><span class="icon solid fa-comments">Guest Book</span></a></li>
+                                <li><a href="/contact" id="contact-link" <% if (page === 'contact') { %> class="active" <% } %> ><span class="icon solid fa-envelope">contact</span></a></li>
+                                <!-- <div id="nav-close"><a href="#" title="Close nav" class="mobile"></a></div> -->
+                            </ul>
+                        </nav>
+
+                </div>
+
+                <div class="bottom">
+
+                    <!-- Social Icons -->
+                        <ul class="icons">
+                            <li><a href="https://www.linkedin.com/in/kate-ko-007438185/" class="icon brands fa-linkedin" target="blank"><span class="label">Linkedin/span></a></li>
+                            <li><a href="https://github.com/katekocalgary" class="icon brands fa-github" target="blank"><span class="label">Github</span></a></li>
+                            <li><a href="https://codepen.io/katekocalgary" class="icon brands fa-codepen" target="blank"><span class="label">codepen</span></a></li>
+                            <li><a href="/contact" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                        </ul>
+
+                </div>
+
+            </div>
+            <!-- <div class="mobilenav">
+               <div id="nav-button" class="mobilenav"><a href="#" title="mobile menu" class="mobile"></a></div>
+            </div> -->
+
+

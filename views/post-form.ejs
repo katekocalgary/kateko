@@ -1,0 +1,60 @@
+<%- include partials/header %>
+  <!-- Include js files-->
+  <%- include partials/mainJS %>  
+   <!-- Main -->
+   <div id="main">
+
+    <!-- testimonials -->
+
+      <section id="testimonial" class="four">
+        <div class="container">
+
+          <header>
+          <h2>Guest Book</h2>
+          </header>
+          <p>Leava a message to Kate</p>
+
+          <!-- Display message -->
+          <% if (messages.postFailMsg) { %>
+          <div class="subMessage">
+            <p class="message-text"> <%= messages.postFailMsg %></p>
+            <div id="message-close"><a href="#"><img src="/img/close.svg"></a></div>
+          </div>
+          <% } %>
+
+          <!-- Messaging form area -->
+          <form action="../posts" method="post" class="post-form" >
+            <fieldset>
+              <div class="form">
+                  <div class="name">
+                      <label for="name">Nick Name</label>
+                      <input id="name" type="text" name="name" placeholder="Name" required minlength="4" maxlength="20"
+                          required>
+                  </div>
+                  <div class="email">
+                      <label for="email">E-mail(ID)</label>
+                      <input id="email" type="email" name="email" placeholder="E-mail" maxlength="50" required>
+                  </div>
+  
+                  <div class="password">
+                      <label for="password">Password</label>
+                      <input id="password" type="password" name="password" placeholder="more than 6 charaters" required minlength="6" maxlength="20"
+                          required>
+                  </div>
+                <div class="summary">
+                  <label for="summary">Message</label>
+                  <textarea name="summary" cols="50" rows="5" maxlength="200" placeholder="message" required></textarea>
+                </div>
+                <div class="col-12">
+                    <button type="submit" id="submit" class="submit" value="submit"> Write</button>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </section>
+      </div>
+    <!-- Include js file-->
+    <%- include partials/layerCloseJS %>
+
+    <!-- Include footer -->
+    <%- include partials/footer %>

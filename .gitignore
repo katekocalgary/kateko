@@ -1,0 +1,7 @@
+# Node build artifacts
+node_modules
+npm-debug.log
+
+# DB data set
+fixtures
+build.js

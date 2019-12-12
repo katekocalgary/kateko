@@ -1,0 +1,39 @@
+<%- include partials/header %>
+<!-- Include js files-->
+<%- include partials/mainJS %>  
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Contact -->
+        <section id="contact" class="five">
+          <div class="container">
+
+            <header>
+              <h2>Contact</h2>
+            </header>
+
+            <p></p>
+
+            <form method="post" action="https://formspree.io/xyyzyoyv">
+              <div class="row">
+                <div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
+                <div class="col-6 col-12-mobile"><input type="email" name="email" placeholder="Email" /></div>
+                <div class="col-12">
+                  <textarea name="message" placeholder="Message"></textarea>
+                </div>
+                <div class="col-12">
+                  <input type="submit" value="Send Message" />
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </section>
+
+
+
+			</div>
+    	<!-- Include js files-->
+			<%- include partials/layerCloseJS %>
+        <!-- Include footer -->
+        <%- include partials/footer %>             

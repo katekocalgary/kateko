@@ -1,0 +1,64 @@
+
+    <%- include partials/header %>
+    <!-- Include js files-->
+    <%- include partials/mainJS %>  
+   <!-- Main -->
+   <div id="main">
+    <!-- project -->
+
+      <section id="testimonial" class="four">
+        <div class="container">
+          <header>
+            <h2>Guest Book</h2>
+          </header>
+          <p>Leave your message to Kate</p>
+          <div class ="blinkbtndiv">
+            <a class = "blinkbtn" href='/posts/post-form'>Write Message</a></div>
+          </div>
+
+          <!-- Display post success message -->
+          <% if (messages.postSuccessMsg) { %>
+            <div class="subMessage">
+                <p class="message-text">  <%= messages.postSuccessMsg %></p>
+                <div id="message-close"><a href="#" ><img src ="/img/close.svg"></a></div>
+            </div>
+          <% } %>  
+          <!-- Display delete message -->
+          <% if (messages.deleteFailMsg) { %>
+            <div class="subMessage">
+                <p class="message-text">  <%= messages.deleteFailMsg %></p>
+                <div id="message-close"><a href="#" ><img src ="/img/close.svg"></a></div>
+            </div>
+          <% } %> 
+          <% if (messages.deleteSuccessMsg) { %>
+            <div class="subMessage">
+                <p class="message-text">  <%= messages.deleteSuccessMsg %></p>
+                <div id="message-close"><a href="#" ><img src ="/img/close.svg"></a></div>
+            </div>
+          <% } %> 
+
+          <!-- Testimonials contents -->
+          <div class="container">
+            <div class="row">
+              <% posts.slice().reverse().forEach(function(post){ %>
+                <div class="col-4 col-12-mobile">
+                <div class="post-box">
+                    <div class='summary'>"<%= post.summary %>"</div>
+                    <div class='name'>- <%= post.name %> -</div>
+                    <div class='date'><%= post.date %></div> 
+                    <div class='slinkbtndiv' id="post-detail"> <a class = "slinkbtn" href="/delete/<%= post.id %>"> Delete</a></div>
+                </div>
+                </div>
+              <% }) %>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Include js file-->
+    <%- include partials/layerCloseJS %>
+    <!-- Include footer -->
+    <%- include partials/footer %>
+
+
+
